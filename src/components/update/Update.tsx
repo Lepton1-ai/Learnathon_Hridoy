@@ -21,7 +21,7 @@ function Update() {
   
   const loadUsersData =async () => {
     return await axios //wait until data will fetch
-    .get('https://lepton1-ai.github.io/users/'+ id) // get the data based on id
+    .get('https://lepton1-ai.github.io/Learnathon_Hridoy/users/'+ id) // get the data based on id
     .then(getData => setUpdateUserData(getData.data))
     .catch(err => console.log(err));
   }
@@ -31,7 +31,7 @@ function Update() {
   const handleUpdate = (event: { preventDefault: () => void; }) =>
   {
     event.preventDefault();
-    axios.put('https://lepton1-ai.github.io/users/'+id, updateUserData)
+    axios.put('https://lepton1-ai.github.io/Learnathon_Hridoy/users/'+id, updateUserData)
     .then(() => {
       // console.log(getData);
       navigate('/table');

@@ -4,7 +4,7 @@ function DeleteData(id: number){
     const confirm = window.confirm("Are you sure to Delete?");
     if (confirm) {
       axios
-        .delete("https://lepton1-ai.github.io/users/" + id)
+        .delete("https://lepton1-ai.github.io/Learnathon_Hridoy/users/" + id)
         .then(() => {
           location.reload(); // this will refresh the tab
         })

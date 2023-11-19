@@ -15,7 +15,7 @@ function Create() {
 
   const handleSubmit = (event: { preventDefault: () => void; }) =>{
     event.preventDefault();
-    axios.post('https://lepton1-ai.github.io/users', userData)
+    axios.post('https://lepton1-ai.github.io/Learnathon_Hridoy/users', userData)
     .then(() => {
       // console.log(getData);
       navigate('/table')
