@@ -34,11 +34,9 @@ jobs:
         run: ls
       - name: Install
         run: |
-            cd lepton1
             npm i
       - name: Build
         run: |
-          cd lepton1
           npm run build
         env:
           NODE_ENV: production
@@ -50,7 +48,7 @@ jobs:
   # Deployment job
   deploy:
     environment:
-      name: LeptonHridoy
+      name: lepton1
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
