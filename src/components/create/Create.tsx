@@ -15,7 +15,7 @@ function Create() {
 
   const handleSubmit = (event: { preventDefault: () => void; }) =>{
     event.preventDefault();
-    axios.post('http://localhost:3000/users', userData)
+    axios.post('https://lepton1-ai.github.io/users', userData)
     .then(() => {
       // console.log(getData);
       navigate('/table')

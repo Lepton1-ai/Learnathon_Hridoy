@@ -26,7 +26,7 @@ function Read() {
 
   const loadUsersData = async () => {
     return await axios //wait until data will fetch
-      .get("http://localhost:3000/users/" + id) // get the data based on id
+      .get("https://lepton1-ai.github.io/users/" + id) // get the data based on id
       .then((getData) => setUserData(getData.data))
       .catch((err) => console.log(err));
   };

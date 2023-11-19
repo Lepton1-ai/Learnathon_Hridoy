@@ -32,7 +32,7 @@ function Table() {
   }, []);
   const loadUsersData = async () => {
     return await axios
-      .get("http://localhost:3000/users")
+      .get("https://lepton1-ai.github.io/users")
       .then((getData) => setUserData(getData.data))
       .catch((err) => console.log(err));
   };
@@ -41,7 +41,7 @@ function Table() {
     const sortingValue = e.target.value;
     setSortValue(sortingValue);
     return await axios
-      .get(`http://localhost:3000/users?_sort=${sortingValue}&_order=asc`)
+      .get(`https://lepton1-ai.github.io/users?_sort=${sortingValue}&_order=asc`)
       .then((getData) => setUserData(getData.data))
       .catch((err) => console.log(err));
   };
@@ -52,7 +52,7 @@ function Table() {
   const handleSearch = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     return await axios
-      .get(`http://localhost:3000/users?q=${userValue}`)
+      .get(`https://lepton1-ai.github.io/users?q=${userValue}`)
       .then((getData) => {
         setUserData(getData.data);
         setUserValue("");
